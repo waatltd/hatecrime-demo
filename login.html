@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML prototype</title>
+    <meta name="description" content="Fronthack page's HTML prototype">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+<header class="layout--header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" class="logo" title="Home"></a>
+      </div>
+      <div class="col-sm-7">
+        <!-- If user is logged in -->
+          <div class="profile pull-right pull-xs-left">
+            <img src="http://placehold.it/50x50" alt="" class="profile__image">
+            <div class="profile__text">
+              <a href="user-notifications.html" class="profile__name">John Doe</a>
+              <div class="profile__position">Position in organisation</div>
+            </div>
+          </div>
+        <!-- /If user is logged in -->
+        <div class="search pull-right hidden-xs">
+          <input type="search" class="form-control search__input" placeholder="Search">
+          <div class="search__icon"><span class="glyphicon glyphicon-search"></span></div>
+          <a href="advanced-search.html" class="search__advanced">Advanced search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout--main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb__item">Home</a>
+      <a href="#" class="breadcrumb__item">Current page name</a>
+    </nav>
+    <div class="printer">
+      <a href="#" class="printer__btn"><i class="icon icon--printer"></i></a>
+    </div>
+    <div class="layout--authentication">
+      <h2>Log in</h2>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Type user's e-mail">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Provide user's password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Log in</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<div class="designs designs--index"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include individual Bootstrap plugins as needed -->
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    <!-- Fronthack development scripts -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/design-toggler.js"></script>
+  </body>
+</html>

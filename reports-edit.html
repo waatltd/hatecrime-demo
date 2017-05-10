@@ -1,0 +1,544 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML prototype</title>
+    <meta name="description" content="Fronthack page's HTML prototype">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+<header class="layout--header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" class="logo" title="Home"></a>
+      </div>
+      <div class="col-sm-7">
+        <!-- If user is logged in -->
+          <div class="profile pull-right pull-xs-left">
+            <img src="http://placehold.it/50x50" alt="" class="profile__image">
+            <div class="profile__text">
+              <a href="user-notifications.html" class="profile__name">John Doe</a>
+              <div class="profile__position">Position in organisation</div>
+            </div>
+          </div>
+        <!-- /If user is logged in -->
+        <div class="search pull-right hidden-xs">
+          <input type="search" class="form-control search__input" placeholder="Search">
+          <div class="search__icon"><span class="glyphicon glyphicon-search"></span></div>
+          <a href="advanced-search.html" class="search__advanced">Advanced search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout--main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb__item">Home</a>
+      <a href="#" class="breadcrumb__item">Current page name</a>
+    </nav>
+    <div class="printer">
+      <a href="#" class="printer__btn"><i class="icon icon--printer"></i></a>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-lg-3">
+        <div class="layout--sidebar">
+          <nav class="nav-vertical">
+            <a href="reports.html" class="nav-vertical__link is-active">Reports</a>
+            <a href="incidents.html" class="nav-vertical__link">Incidents</a>
+            <a href="organizations.html" class="nav-vertical__link">Organizations</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10 col-lg-9">
+        <div class="layout--content">
+          <h2>Edit report</h2>
+          <form>
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion1" aria-expanded="true" aria-controls="accordion1">
+                Report details
+              </a>
+              <div class="accordion__content collapse in" id="accordion1">
+                <h3>Report ID: 26124</h3>
+                <div class="well">
+                  <div class="form-horizontal row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="form-group">
+                        <label for="exampleInput1" class="col-sm-3">Report name</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput1" placeholder="Report name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Source(s)</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2" placeholder="Find NGO (autocomplete)">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput3" class="col-sm-3">Created</label>
+                        <div class="col-sm-6">
+                          <input type="date" class="form-control" id="exampleInput3">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput4" class="col-sm-3">Modified</label>
+                        <div class="col-sm-6">
+                          <input type="date" class="form-control" id="exampleInput4">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">Status</label>
+                        <div class="col-sm-6">
+                          <select id="exampleInput5" class="form-control">
+                            <option selected disabled>Select from list</option>
+                            <option>Open</option>
+                            <option>Closed</option>
+                            <option>Lorem ipsum</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">Assigned</label>
+                        <div class="col-sm-6">
+                          <select id="exampleInput5" class="form-control">
+                            <option selected disabled>Select from list</option>
+                            <option>Administrator</option>
+                            <option>Lorem ipsum</option>
+                            <option>Dolor sit</option>
+                          </select>
+                        </div>
+                        <div class="col-sm-3">
+                          <button class="btn btn-white btn-block" type="submit">
+                            <i class="icon icon--megaphone"></i> Notify user
+                          </button>
+                          <!-- If it has to act as a switcher,
+                          you can replace btn-white class with btn-primary-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion2" aria-expanded="true" aria-controls="accordion2">
+                Incidents Details
+              </a>
+              <div class="accordion__content collapse in" id="accordion2">
+                <h3 class="row">
+                  <div class="col-sm-4">Incidents (15)</div>
+                  <div class="col-sm-8">
+                    <div class="btn-toolbar pull-right pull-xs-left" role="toolbar">
+                      <a href="#" class="btn btn-default">
+                        <i class="icon icon--doc-edit"></i> Add incident
+                      </a>
+                      <a href="#" class="btn btn-default">
+                        <i class="icon icon--docs"></i> Add multiple incidents
+                      </a>
+                      <a href="#" class="btn btn-default">
+                        <i class="icon icon--upload-2"></i> Upload incident
+                      </a>
+                    </div>
+                  </div>
+                </h3>
+                <div class="table-responsive">
+                  <table class="table table-results">
+                    <thead>
+                      <tr>
+                        <th>No of incidents</th>
+                        <th>Bias motivation</th>
+                        <th>Type of crime</th>
+                        <th>Source</th>
+                        <th>Country</th>
+                        <th><a href="#"><i class="icon icon--square-add"></i></a></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="text" class="form-control input-sm" placeholder="0">
+                        </td>
+                        <td>
+                          <select class="form-control input-sm">
+                            <option selected disabled>Select</option>
+                            <option>Anti-Semitism</option>
+                            <option>Dolor sit</option>
+                            <option>Lorem ipsum</option>
+                          </select>
+                        </td>
+                        <td>
+                          <select class="form-control input-sm">
+                            <option selected disabled>Select</option>
+                            <option>Dolor sit</option>
+                            <option>Lorem ipsum</option>
+                          </select>
+                        </td>
+                        <td>
+                          <input type="text" class="form-control input-sm" placeholder="autocomplete">
+                        </td>
+                        <td>
+                          <input type="text" class="form-control input-sm" placeholder="autocomplete">
+                        </td>
+                        <td>
+                          <a href="#"><i class="icon icon--square-add"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="well">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="item15">Country (ies)</label>
+                        <!-- Apply "Chosen" like filter there.
+                        See "05-2- Edit v2.png" design for reference -->
+                        <select id="item15" class="form-control input-sm">
+                          <option selected>All</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="item15">Bias motivation</label>
+                        <select id="item15" class="form-control input-sm">
+                          <option selected>All</option>
+                          <option>Anti-Semitism</option>
+                          <option>Dolor sit</option>
+                          <option>Lorem ipsum</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="item16">Type of crime</label>
+                        <select id="item16" class="form-control input-sm">
+                          <option selected>All</option>
+                          <option>Dolor sit</option>
+                          <option>Lorem ipsum</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label for="item17">Show</label>
+                        <select id="item17" class="form-control input-sm">
+                          <option selected>25</option>
+                          <option>50</option>
+                          <option>100</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table table-results">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox"></th>
+                        <!-- Sorting filters should be applied to all cols below.
+                        Only three there are implemented as examples -->
+                        <th>
+                          <div class="table-sort is-up">
+                            <a href="#" class="table-sort__up">
+                              <span class="glyphicon glyphicon-menu-up"></span>
+                            </a>
+                            <a href="#" class="table-sort__down">
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                          </div>
+                          No
+                        </th>
+                        <th>
+                          <div class="table-sort is-down">
+                            <a href="#" class="table-sort__up">
+                              <span class="glyphicon glyphicon-menu-up"></span>
+                            </a>
+                            <a href="#" class="table-sort__down">
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                          </div>
+                          Id
+                        </th>
+                        <th>
+                          <div class="table-sort">
+                            <a href="#" class="table-sort__up">
+                              <span class="glyphicon glyphicon-menu-up"></span>
+                            </a>
+                            <a href="#" class="table-sort__down">
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                          </div>
+                          Status
+                        </th>
+                        <th>Country</th>
+                        <th>Bias motivation</th>
+                        <th>Type of crime</th>
+                        <th>Date</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>5</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>6</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>5</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>6</td>
+                        <td>256741</td>
+                        <td>New</td>
+                        <td>Sweden</td>
+                        <td>Anti-Semitism</td>
+                        <td>Violation</td>
+                        <td>2017.01.01</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="clearfix">
+                  <button class="btn btn-default float-left" type="button">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Delete selected
+                  </button>
+                  <ul class="pagination float-right">
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="disabled">
+                      <span aria-hidden="true">...</span>
+                    </li>
+                    <li><a href="#">next</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion3" aria-expanded="true" aria-controls="accordion3">
+                Attachments
+              </a>
+              <div class="accordion__content collapse in" id="accordion3">
+                <h3 class="row">
+                  <div class="col-sm-4">Attached files (2)</div>
+                  <div class="col-sm-8">
+                    <a href="#" class="btn btn-default pull-right pull-xs-left">
+                      <i class="icon icon--upload-2"></i> Attach files
+                    </a>
+                  </div>
+                </h3>
+                <div class="well well-sm">
+                  <div class="file-item">
+                    <div class="file-item__info">
+                      <i class="icon icon--mime-pdf"></i> filename001.pdf
+                    </div>
+                    <div class="file-item__actions">
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--download"></i></button>
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--bin"></i></button>
+                    </div>
+                  </div>
+                  <div class="file-item">
+                    <div class="file-item__info">
+                      <i class="icon icon--mime-pdf"></i> filename002.pdf
+                    </div>
+                    <div class="file-item__actions">
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--download"></i></button>
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--bin"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion4" aria-expanded="true" aria-controls="accordion4">
+                Report history
+              </a>
+              <div class="accordion__content collapse in" id="accordion4">
+                <div class="well well-sm">
+                  <dl>
+                    <dt>2017.01.01  12:04</dt>
+                    <dd>
+                      Anna Smith added comment:
+                      <blockquote>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+                      </blockquote>
+                    </dd>
+                    <dt>2017.01.01  12:03</dt>
+                    <dd>John Doe attached the file <a href="#">filename001.pdf</a></dd>
+                    <dt>2017.01.01  12:01</dt>
+                    <dd>Doe created the file</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion5" aria-expanded="true" aria-controls="accordion5">
+                Comments
+              </a>
+              <div class="accordion__content collapse in" id="accordion5">
+                <h3 class="row">
+                  <div class="col-sm-4">Add your comments</div>
+                  <div class="col-sm-8">
+                    <button type="button" class="btn btn-default pull-right pull-xs-left">
+                      <span class="glyphicon glyphicon-comment"></span> Comment
+                    </button>
+                  </div>
+                </h3>
+                <textarea class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-default btn-md">Cancel</button>
+              </div>
+              <div class="col-sm-8">
+                <div class="btn-toolbar pull-right pull-xs-left" role="toolbar">
+                  <button type="submit" class="btn btn-danger btn-md">Delete report</button>
+                  <button type="submit" class="btn btn-primary btn-md">Export report</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="designs designs--reports-edit"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include individual Bootstrap plugins as needed -->
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    <!-- Fronthack development scripts -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/design-toggler.js"></script>
+  </body>
+</html>

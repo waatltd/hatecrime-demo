@@ -1,0 +1,193 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML prototype</title>
+    <meta name="description" content="Fronthack page's HTML prototype">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+<header class="layout--header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" class="logo" title="Home"></a>
+      </div>
+      <div class="col-sm-7">
+        <!-- If user is logged in -->
+          <div class="profile pull-right pull-xs-left">
+            <img src="http://placehold.it/50x50" alt="" class="profile__image">
+            <div class="profile__text">
+              <a href="user-notifications.html" class="profile__name">John Doe</a>
+              <div class="profile__position">Position in organisation</div>
+            </div>
+          </div>
+        <!-- /If user is logged in -->
+        <div class="search pull-right hidden-xs">
+          <input type="search" class="form-control search__input" placeholder="Search">
+          <div class="search__icon"><span class="glyphicon glyphicon-search"></span></div>
+          <a href="advanced-search.html" class="search__advanced">Advanced search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout--main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb__item">Home</a>
+      <a href="#" class="breadcrumb__item">Current page name</a>
+    </nav>
+    <div class="printer">
+      <a href="#" class="printer__btn"><i class="icon icon--printer"></i></a>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-lg-3">
+        <div class="layout--sidebar">
+          <nav class="nav-vertical">
+            <a href="reports.html" class="nav-vertical__link">Reports</a>
+            <a href="incidents.html" class="nav-vertical__link">Incidents</a>
+            <a href="organizations.html" class="nav-vertical__link is-active">Organizations</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10 col-lg-9">
+        <div class="layout--content">
+          <h2>Create Organization</h2>
+          <form>
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion1" aria-expanded="true" aria-controls="accordion1">
+                Organization information
+              </a>
+              <div class="accordion__content collapse in" id="accordion1">
+                <h3>General information</h3>
+                <div class="well">
+                  <div class="form-horizontal row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="form-group">
+                        <label for="exampleInput1" class="col-sm-3">English name*</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput1">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Original name*</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput3" class="col-sm-3">Base country*</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput4">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Regional contributor</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3>Contact</h3>
+                <div class="well">
+                  <div class="form-horizontal row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="form-group">
+                        <label for="exampleInput1" class="col-sm-3">Email*</label>
+                        <div class="col-sm-6">
+                          <input type="email" class="form-control" id="exampleInput1">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Phone</label>
+                        <div class="col-sm-6">
+                          <input type="tel" class="form-control" id="exampleInput2">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput3" class="col-sm-3">Website</label>
+                        <div class="col-sm-6">
+                          <input type="url" class="form-control" id="exampleInput3">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput4" class="col-sm-3">Adress</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput4">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">Postal-code</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput5">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">City</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput5">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion8" aria-expanded="true" aria-controls="accordion8">
+                Comments
+              </a>
+              <div class="accordion__content collapse in" id="accordion8">
+                <h3 class="row">
+                  <div class="col-sm-4">Add your comments</div>
+                  <div class="col-sm-8">
+                    <button type="button" class="btn btn-default pull-right pull-xs-left">
+                      <span class="glyphicon glyphicon-comment"></span> Comment
+                    </button>
+                  </div>
+                </h3>
+                <textarea class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-default btn-md">Cancel</button>
+              </div>
+              <div class="col-sm-8">
+                <div class="btn-toolbar pull-right pull-xs-left" role="toolbar">
+                  <button type="submit" class="btn btn-primary btn-lg">Create</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="designs designs--organizations-edit"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include individual Bootstrap plugins as needed -->
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    <!-- Fronthack development scripts -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/design-toggler.js"></script>
+  </body>
+</html>

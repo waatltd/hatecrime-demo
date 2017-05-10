@@ -1,0 +1,547 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML prototype</title>
+    <meta name="description" content="Fronthack page's HTML prototype">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+<header class="layout--header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" class="logo" title="Home"></a>
+      </div>
+      <div class="col-sm-7">
+        <!-- If user is logged in -->
+          <div class="profile pull-right pull-xs-left">
+            <img src="http://placehold.it/50x50" alt="" class="profile__image">
+            <div class="profile__text">
+              <a href="user-notifications.html" class="profile__name">John Doe</a>
+              <div class="profile__position">Position in organisation</div>
+            </div>
+          </div>
+        <!-- /If user is logged in -->
+        <div class="search pull-right hidden-xs">
+          <input type="search" class="form-control search__input" placeholder="Search">
+          <div class="search__icon"><span class="glyphicon glyphicon-search"></span></div>
+          <a href="advanced-search.html" class="search__advanced">Advanced search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout--main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb__item">Home</a>
+      <a href="#" class="breadcrumb__item">Current page name</a>
+    </nav>
+    <div class="printer">
+      <a href="#" class="printer__btn"><i class="icon icon--printer"></i></a>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-lg-3">
+        <div class="layout--sidebar">
+          <nav class="nav-vertical">
+            <a href="reports.html" class="nav-vertical__link">Reports</a>
+            <a href="incidents.html" class="nav-vertical__link is-active">Incidents</a>
+            <a href="organizations.html" class="nav-vertical__link">Organizations</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10 col-lg-9">
+        <div class="layout--content">
+          <h2>Edit Incident 235456</h2>
+          <div class="alert alert-warning" role="alert">
+            <h3><i class="icon icon--warning"></i> Warning</h3>
+            This incident might be a duplicate of 1458<br />
+            <br />
+            <button class="btn btn-default" type="button">Resolve</button>
+            <button class="btn btn-default" type="button">Flag as duplicated</button>
+          </div>
+          <form>
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion1" aria-expanded="true" aria-controls="accordion1">
+                Incident details
+              </a>
+              <div class="accordion__content collapse in" id="accordion1">
+                <div class="well">
+                  <div class="form-horizontal row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="form-group">
+                        <label for="exampleInput1" class="col-sm-3">Report</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput1" placeholder="Report name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Source(s)</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2" placeholder="Find NGO (autocomplete)">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Country</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2" placeholder="Country name(autocomplete)">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput2" class="col-sm-3">Location</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="exampleInput2" placeholder="City name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput3" class="col-sm-3">Date</label>
+                        <div class="col-sm-6">
+                          <input type="date" class="form-control" id="exampleInput3">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput4" class="col-sm-3">Hour</label>
+                        <div class="col-sm-6">
+                          <input type="time" class="form-control" id="exampleInput4">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">Status</label>
+                        <div class="col-sm-6">
+                          <select id="exampleInput5" class="form-control">
+                            <option selected disabled>Select from list</option>
+                            <option>Open</option>
+                            <option>Closed</option>
+                            <option>Lorem ipsum</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInput5" class="col-sm-3">Assigned</label>
+                        <div class="col-sm-6">
+                          <select id="exampleInput5" class="form-control">
+                            <option selected disabled>Select from list</option>
+                            <option>Administrator</option>
+                            <option>Lorem ipsum</option>
+                            <option>Dolor sit</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion2" aria-expanded="true" aria-controls="accordion2">
+                Type of crime
+              </a>
+              <div class="accordion__content collapse in" id="accordion2">
+                <div class="well">
+                  <div class="form-group">
+                    <label>Violent attacks against people</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option1"> Homicide
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option2"> Physical assault
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option3"> Sexual assault
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option4"> Abduction
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option5"> Robbery
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Bombing
+                      </label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="form-group">
+                    <label>Threats</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="threats" value="option1"> Threats
+                      </label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="form-group">
+                    <label>Attacks against property</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option1"> Damage to property
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option2"> Burglary
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option3"> Theft
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option4"> Hacking
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option5"> Vandalism
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Arson
+                      </label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="form-group">
+                    <label>Bias motivation</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option1"> Racism and xenophobia
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option2"> Bias against Romaand Sinti
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option3"> Anti-Semitism
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option4"> Bias against Muslims
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option5"> Bias against Christians
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option6"> Bias against membersof other religions orbeliefs
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option6"> Bias against peoplewith disabilities
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option6"> Bias based on sexualorientation and genderidentity
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option6"> Bias against other groups
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="motivatioon" value="option6"> Bias based on gender
+                      </label>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="form-group">
+                    <label>Bias indicators</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option1"> Victim or witness perception's
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option2"> Comments, writtenstatements, gestures orgraffiti
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option3"> Differences between perpetrator and victim on ethnic, religious orcultural grounds
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option4"> Previous bias crimesand incidents
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option5"> Location and timingof the incident
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Presence of organizedhate groups
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Patterns or frequencyof the incidents
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Nature of the violence
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option6"> Lack of other motives
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion3" aria-expanded="true" aria-controls="accordion3">
+                Victims
+              </a>
+              <div class="accordion__content collapse in" id="accordion3">
+                <div class="well">
+                  <div class="form-horizontal row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="form-group">
+                        <label for="exampleInput1" class="col-sm-3">Number of victims</label>
+                        <div class="col-sm-6">
+                          <input type="number" class="form-control" id="exampleInput21">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-results">
+                      <caption>Victim details</caption>
+                      <thead>
+                        <tr>
+                          <!-- Sorting filters should be applied to all cols below.
+                          Only one there is implemented as an example -->
+                          <th>
+                            <div class="table-sort is-up">
+                              <a href="#" class="table-sort__up">
+                                <span class="glyphicon glyphicon-menu-up"></span>
+                              </a>
+                              <a href="#" class="table-sort__down">
+                                <span class="glyphicon glyphicon-menu-down"></span>
+                              </a>
+                            </div>
+                            No
+                          </th>
+                          <th>Gender</th>
+                          <th>Injuries</th>
+                          <th colspan="2">Group affiliation</th>
+                          <th><a href="#"><i class="icon icon--square-add"></i></a></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>No injuries</option>
+                              <option>Serious injuries</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <a href="#"><i class="icon icon--square-remove"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>No injuries</option>
+                              <option>Serious injuries</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <a href="#"><i class="icon icon--square-remove"></i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>Male</option>
+                              <option>Female</option>
+                            </select>
+                          </td>
+                          <td>
+                            <select class="form-control input-sm">
+                              <option selected disabled>Select</option>
+                              <option>No injuries</option>
+                              <option>Serious injuries</option>
+                            </select>
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <input type="text" class="form-control input-sm">
+                          </td>
+                          <td>
+                            <a href="#"><i class="icon icon--square-add"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion4" aria-expanded="true" aria-controls="accordion4">
+                Perpetrator information
+              </a>
+              <div class="accordion__content collapse in" id="accordion4">
+                <div class="well">
+                  <div class="form-group">
+                    <label>Perpetrator information</label>
+                    <div>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option1"> Carried out by a group
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option2"> Two groups ormore involved
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option3"> Carried out bystate authorities
+                      </label>
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="againstpeople" value="option4"> Use of weapon
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion5" aria-expanded="true" aria-controls="accordion5">
+                Description
+              </a>
+              <div class="accordion__content collapse in" id="accordion5">
+                <h3>Add description</h3>
+                <textarea class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion6" aria-expanded="true" aria-controls="accordion6">
+                Attachments
+              </a>
+              <div class="accordion__content collapse in" id="accordion6">
+                <h3 class="row">
+                  <div class="col-sm-4">Attached files (2)</div>
+                  <div class="col-sm-8">
+                    <a href="#" class="btn btn-default pull-right pull-xs-left">
+                      <i class="icon icon--upload-2"></i> Attach files
+                    </a>
+                  </div>
+                </h3>
+                <div class="well well-sm">
+                  <div class="file-item">
+                    <div class="file-item__info">
+                      <i class="icon icon--mime-pdf"></i> filename001.pdf
+                    </div>
+                    <div class="file-item__actions">
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--download"></i></button>
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--bin"></i></button>
+                    </div>
+                  </div>
+                  <div class="file-item">
+                    <div class="file-item__info">
+                      <i class="icon icon--mime-pdf"></i> filename002.pdf
+                    </div>
+                    <div class="file-item__actions">
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--download"></i></button>
+                      <button type="button" class="btn btn-white btn-xs"><i class="icon icon--bin"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion7" aria-expanded="true" aria-controls="accordion7">
+                Incident history
+              </a>
+              <div class="accordion__content collapse in" id="accordion7">
+                <div class="well well-sm">
+                  <dl>
+                    <dt>2017.01.01  12:04</dt>
+                    <dd>
+                      Anna Smith added comment:
+                      <blockquote>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem.  Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
+                      </blockquote>
+                    </dd>
+                    <dt>2017.01.01  12:03</dt>
+                    <dd>John Doe attached the file <a href="#">filename001.pdf</a></dd>
+                    <dt>2017.01.01  12:01</dt>
+                    <dd>Doe created the file</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <a class="accordion__heading collapse" role="button" data-toggle="collapse" href="#accordion8" aria-expanded="true" aria-controls="accordion8">
+                Comments
+              </a>
+              <div class="accordion__content collapse in" id="accordion8">
+                <h3 class="row">
+                  <div class="col-sm-4">Add your comments</div>
+                  <div class="col-sm-8">
+                    <button type="button" class="btn btn-default pull-right pull-xs-left">
+                      <span class="glyphicon glyphicon-comment"></span> Comment
+                    </button>
+                  </div>
+                </h3>
+                <textarea class="form-control" rows="6"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <button type="submit" class="btn btn-default btn-md">Cancel</button>
+              </div>
+              <div class="col-sm-8">
+                <div class="btn-toolbar pull-right pull-xs-left" role="toolbar">
+                  <button type="submit" class="btn btn-danger btn-md">Delete incident</button>
+                  <button type="submit" class="btn btn-primary btn-md">Export incident</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="designs designs--incidents-edit"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include individual Bootstrap plugins as needed -->
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    <!-- Fronthack development scripts -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/design-toggler.js"></script>
+  </body>
+</html>

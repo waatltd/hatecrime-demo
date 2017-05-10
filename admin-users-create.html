@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HTML prototype</title>
+    <meta name="description" content="Fronthack page's HTML prototype">
+
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+<header class="layout--header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <a href="/" class="logo" title="Home"></a>
+      </div>
+      <div class="col-sm-7">
+        <!-- If user is logged in -->
+          <div class="profile pull-right pull-xs-left">
+            <img src="http://placehold.it/50x50" alt="" class="profile__image">
+            <div class="profile__text">
+              <a href="user-notifications.html" class="profile__name">John Doe</a>
+              <div class="profile__position">Position in organisation</div>
+            </div>
+          </div>
+        <!-- /If user is logged in -->
+        <div class="search pull-right hidden-xs">
+          <input type="search" class="form-control search__input" placeholder="Search">
+          <div class="search__icon"><span class="glyphicon glyphicon-search"></span></div>
+          <a href="advanced-search.html" class="search__advanced">Advanced search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="layout--main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="#" class="breadcrumb__item">Home</a>
+      <a href="#" class="breadcrumb__item">Current page name</a>
+    </nav>
+    <div class="printer">
+      <a href="#" class="printer__btn"><i class="icon icon--printer"></i></a>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-lg-3">
+        <div class="layout--sidebar">
+          <nav class="nav-vertical">
+            <a href="reports.html" class="nav-vertical__link">Reports</a>
+            <a href="incidents.html" class="nav-vertical__link">Incidents</a>
+            <a href="organizations.html" class="nav-vertical__link">Organizations</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10 col-lg-9">
+        <div class="layout--content">
+          <h2>Create New User</h2>
+          <form action="">
+            <div class="well">
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <div class="form-group">
+                    <label for="exampleInput3">Email</label>
+                    <input type="email" class="form-control input-lg" id="exampleInput3">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInput1">First name</label>
+                    <input type="text" class="form-control input-lg" id="exampleInput1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInput2">Surname</label>
+                    <input type="text" class="form-control input-lg" id="exampleInput2">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInput4">Phone</label>
+                    <input type="tel" class="form-control input-lg" id="exampleInput4">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInput5">Group</label>
+                    <select id="exampleInput5" class="form-control input-lg">
+                      <option selected disabled>Select from list</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-md">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="designs designs--admin-users-create"></div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include individual Bootstrap plugins as needed -->
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="../src/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+
+    <!-- Fronthack development scripts -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/design-toggler.js"></script>
+  </body>
+</html>
